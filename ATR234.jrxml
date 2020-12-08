@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ATR234" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea3018d6-7968-4405-8524-fd8fa4e4b5d3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+	<property name="ireport.jasperserver.url" value="http://10.99.1.192:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="syazwan|upsidev"/>
+	<property name="ireport.jasperserver.report.resource" value="/Reports/MyHRIS/HRA_AT/ATR234_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Reports/MyHRIS/HRA_AT/ATR234"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFBF80">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="PTJ_CODE_DESC" uuid="fdfeeefd-862f-4bf0-b4b5-4f37fb156d15">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="DEPT_CODE" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+DM_DEPT_CODE AS "DM_DEPT_CODE", 
+DM_DEPT_CODE||' - '||DM_DEPT_DESC AS "DM_CODE_DESC"
+FROM DEPARTMENT_MAIN
+WHERE DM_DEPT_CODE = $P{DEPT_CODE}]]>
+		</queryString>
+		<field name="DM_DEPT_CODE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DM_DEPT_CODE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="department_main"/>
+		</field>
+		<field name="DM_CODE_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DM_CODE_DESC"/>
+		</field>
+		<variable name="DM_DEPT_CODE" class="java.lang.String">
+			<variableExpression><![CDATA[$F{DM_DEPT_CODE}]]></variableExpression>
+		</variable>
+		<variable name="DM_DEPT_DESC" class="java.lang.String">
+			<variableExpression><![CDATA[$F{DM_CODE_DESC}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="TR_LIST" uuid="4222cb70-d11c-4e66-a812-0bc6199e04cb">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="DEPARTMENT" class="java.lang.String"/>
+		<parameter name="TRAINING_MM" class="java.lang.String"/>
+		<parameter name="TRAINING_YEAR" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT DISTINCT 
+TH_REF_ID AS "TH_REF_ID",
+TH_TRAINING_TITLE AS "TH_TRAINING_TITLE",
+TO_CHAR(TH_DATE_FROM,'dd/mm/yyyy')||' hingga '||TO_CHAR(TH_DATE_TO,'dd/mm/yyyy') AS "TARIKH",
+TH_TRAINING_VENUE AS "TH_TRAINING_VENUE", 
+TH_TRAINING_STATE AS "TH_TRAINING_STATE", SM_STATE_DESC AS "SM_STATE_DESC",
+TH_TRAINING_COUNTRY AS "TH_TRAINING_COUNTRY", CM_COUNTRY_DESC AS "CM_COUNTRY_DESC",
+TH_ORGANIZER_NAME AS "TH_ORGANIZER_NAME",
+TOH_ORG_DESC AS "TOH_ORG_DESC"
+FROM TRAINING_HEAD
+JOIN STAFF_TRAINING_HEAD ON TH_REF_ID = STH_TRAINING_REFID
+LEFT JOIN STAFF_MAIN ON STH_STAFF_ID = SM_STAFF_ID
+LEFT JOIN DEPARTMENT_MAIN ON SM_DEPT_CODE = DM_DEPT_CODE
+LEFT JOIN STATE_MAIN ON TH_TRAINING_STATE = SM_STATE_CODE
+LEFT JOIN COUNTRY_MAIN ON TH_TRAINING_COUNTRY = CM_COUNTRY_CODE
+LEFT JOIN TRAINING_ORGANIZER_HEAD ON TOH_ORG_CODE = TH_ORGANIZER_NAME
+WHERE TH_INTERNAL_EXTERNAL = 'EXTERNAL_AGENCY'
+AND TH_STATUS = 'APPROVE'
+AND STH_STATUS = 'REJECT' 
+AND STH_APPROVE_BY IS NULL
+AND ($P{DEPARTMENT} IS NULL OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
+AND ($P{TRAINING_MM} IS NULL OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
+AND TO_CHAR(TH_DATE_FROM,'yyyy') = $P{TRAINING_YEAR}]]>
+		</queryString>
+		<field name="TH_REF_ID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_REF_ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="TH_TRAINING_TITLE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_TITLE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="TARIKH" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TARIKH"/>
+		</field>
+		<field name="TH_TRAINING_VENUE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_VENUE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="TH_TRAINING_STATE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_STATE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="SM_STATE_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_STATE_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="state_main"/>
+		</field>
+		<field name="TH_TRAINING_COUNTRY" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_COUNTRY"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="CM_COUNTRY_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CM_COUNTRY_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="country_main"/>
+		</field>
+		<field name="TH_ORGANIZER_NAME" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TH_ORGANIZER_NAME"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+		</field>
+		<field name="TOH_ORG_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TOH_ORG_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_organizer_head"/>
+		</field>
+		<sortField name="TH_REF_ID"/>
+		<variable name="TR_LIST_REFID" class="java.lang.String">
+			<variableExpression><![CDATA[$F{TH_REF_ID}]]></variableExpression>
+		</variable>
+		<variable name="COL_COUNT" class="java.lang.Integer" resetType="Page">
+			<variableExpression><![CDATA[$V{COLUMN_COUNT}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="STAFF_LIST" uuid="6c251188-97bb-4681-8b48-ed80ea7077b8">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="DEPARTMENT" class="java.lang.String"/>
+		<parameter name="TRAINING_MM" class="java.lang.String"/>
+		<parameter name="TRAINING_YEAR" class="java.lang.String"/>
+		<parameter name="REFID" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+SM_STAFF_NAME AS "SM_STAFF_NAME",
+STH_STAFF_ID AS "STH_STAFF_ID",
+SM_DEPT_CODE AS "SM_DEPT_CODE",
+STH_STATUS AS "STH_STATUS",
+GET_STAFF_NAME(STH_VERIFY_BY) AS "VER_BY_NAME",
+STH_DEPT_TRAINING_BENEFIT AS "STH_DEPT_TRAINING_BENEFIT", 
+STH_RECOMMENDER_REASON AS "STH_RECOMMENDER_REASON"
+FROM TRAINING_HEAD
+JOIN STAFF_TRAINING_HEAD ON TH_REF_ID = STH_TRAINING_REFID
+LEFT JOIN STAFF_MAIN ON STH_STAFF_ID = SM_STAFF_ID
+LEFT JOIN DEPARTMENT_MAIN ON SM_DEPT_CODE = DM_DEPT_CODE
+LEFT JOIN STAFF_TRAINING_COST_DETL ON STCD_COST_CODE = 'T001' AND STCD_STAFF_ID = STH_STAFF_ID 
+AND STCD_TRAINING_REFID = $P{REFID}
+WHERE TH_INTERNAL_EXTERNAL = 'EXTERNAL_AGENCY'
+AND TH_STATUS = 'APPROVE'
+AND STH_STATUS = 'REJECT' 
+AND STH_APPROVE_BY IS NULL
+AND ($P{DEPARTMENT} IS NULL OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
+AND ($P{TRAINING_MM} IS NULL OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
+AND TO_CHAR(TH_DATE_FROM,'yyyy') = $P{TRAINING_YEAR}
+AND TH_REF_ID = $P{REFID}]]>
+		</queryString>
+		<field name="SM_STAFF_NAME" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_STAFF_NAME"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
+		</field>
+		<field name="STH_STAFF_ID" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="STH_STAFF_ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
+		</field>
+		<field name="SM_DEPT_CODE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_DEPT_CODE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
+		</field>
+		<field name="STH_STATUS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="STH_STATUS"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
+		</field>
+		<field name="VER_BY_NAME" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="VER_BY_NAME"/>
+		</field>
+		<field name="STH_DEPT_TRAINING_BENEFIT" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="STH_DEPT_TRAINING_BENEFIT"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
+		</field>
+		<field name="STH_RECOMMENDER_REASON" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="STH_RECOMMENDER_REASON"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
+		</field>
+		<variable name="SID" class="java.lang.String">
+			<variableExpression><![CDATA[$F{STH_STAFF_ID}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="dummyDT" uuid="d9084927-bdf1-40c5-97cf-99928863c7ca">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[SELECT '' AS "DUM1", '' AS "DUM2", '' AS "DUM3", '' AS "DUM4", '' AS "DUM5"]]>
+		</queryString>
+		<field name="DUM1" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DUM1"/>
+		</field>
+		<field name="DUM2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DUM2"/>
+		</field>
+		<field name="DUM3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DUM3"/>
+		</field>
+		<field name="DUM4" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DUM4"/>
+		</field>
+		<field name="DUM5" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DUM5"/>
+		</field>
+	</subDataset>
+	<parameter name="DEPARTMENT" class="java.lang.String"/>
+	<parameter name="TRAINING_MM" class="java.lang.String"/>
+	<parameter name="TRAINING_YEAR" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT '' AS "DUMMY"]]>
+	</queryString>
+	<field name="DUMMY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DUMMY"/>
+	</field>
+	<variable name="DM_DEPT_CODE" class="java.lang.String">
+		<variableExpression><![CDATA[$V{DM_DEPT_CODE}]]></variableExpression>
+	</variable>
+	<variable name="DM_DEPT_DESC" class="java.lang.String">
+		<variableExpression><![CDATA[$V{DM_DEPT_DESC}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<frame>
+				<reportElement positionType="Float" x="0" y="36" width="701" height="16" uuid="5b29475d-42ee-4561-a071-2b40df59476b"/>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="16" uuid="7094725c-f324-46c9-ba69-2f25ca65a071"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[PTj]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="0" width="3" height="16" uuid="e940605b-4820-492e-b0ce-09e6955d8998"/>
+					<textElement>
+						<font fontName="Arial" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement isPrintRepeatedValues="false" x="691" y="0" width="10" height="16" uuid="e97e223e-e2cd-44da-bfc4-f21a24465475"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="PTJ_CODE_DESC" uuid="df189c72-1f08-4666-9d2b-5fde61f90eef">
+							<datasetParameter name="DEPT_CODE">
+								<datasetParameterExpression><![CDATA[$P{DEPARTMENT}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+							<returnValue fromVariable="DM_DEPT_CODE" toVariable="DM_DEPT_CODE"/>
+							<returnValue fromVariable="DM_DEPT_DESC" toVariable="DM_DEPT_DESC"/>
+						</datasetRun>
+						<jr:listContents height="16" width="10"/>
+					</jr:list>
+				</componentElement>
+				<textField isStretchWithOverflow="true" evaluationTime="Report" isBlankWhenNull="true">
+					<reportElement stretchType="ContainerHeight" x="93" y="0" width="587" height="16" uuid="3e4b4636-ecb7-4ac7-a3a0-d7bcdbf190e7"/>
+					<textElement markup="none">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{DM_DEPT_CODE} == null?"SEMUA":$V{DM_DEPT_DESC}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="20" width="220" height="16" uuid="f310e373-09e8-4257-895f-912d1fca5b5b"/>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="16" uuid="c80043ec-2ba0-472d-adda-e62701fe7e1f"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[Bulan / Tahun ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="0" width="3" height="16" uuid="ed9627e8-c8b7-46be-9cf7-8a2140b94e1e"/>
+					<textElement>
+						<font fontName="Arial" size="10"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement positionType="Float" stretchType="ContainerHeight" x="93" y="0" width="127" height="16" uuid="934ef993-e1e7-4a8f-9c86-bb95093d004d"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{TRAINING_MM} == null || $P{TRAINING_MM} == ""? "SEMUA": 
+(
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("01")? "JANUARI": 
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("02")? "FEBRUARI":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("03")? "MAC":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("04")? "APRI;":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("05")? "MEI":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("06")? "JUN":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("07")? "JULAI":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("08")? "OGOS":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("09")? "SEPTEMBER":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("10")? "OKTOBER":
+	$P{TRAINING_MM} != null && $P{TRAINING_MM}.equals("11")? "NOVEMBER": "DISEMBER"
+))+" / "+
+($P{TRAINING_YEAR} == null ? "SEMUA": $P{TRAINING_YEAR})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="0" width="610" height="20" uuid="d8ad2ed0-2676-4310-86b5-5ac2a6b0f438"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Permohonan Mengikuti Kursus Anjuran Luar Yang Ditolak oleh BSM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="727" y="37" width="75" height="15" uuid="51583a61-9096-41c0-a84d-9386cd2779c4">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Report ID : ATR234]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="200" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="802" height="200" uuid="b36cea41-3707-4788-a701-685f2aad6c98">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TR_LIST" uuid="21c6a57c-d378-42a0-ab19-5964e3b5ab2a">
+						<datasetParameter name="DEPARTMENT">
+							<datasetParameterExpression><![CDATA[$P{DEPARTMENT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TRAINING_MM">
+							<datasetParameterExpression><![CDATA[$P{TRAINING_MM}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="TRAINING_YEAR">
+							<datasetParameterExpression><![CDATA[$P{TRAINING_YEAR}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="20" uuid="d2662657-5293-48a9-b409-0f7d5ead9900">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="20" height="30" uuid="52796816-3e0b-4ee7-a3ce-db48f9302c3e">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="9" isBold="true"/>
+									<paragraph spacingBefore="3"/>
+								</textElement>
+								<text><![CDATA[Bil]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="25">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="20" height="25" uuid="c5424184-361e-4cf2-8da8-f38793829321">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" markup="styled">
+									<font fontName="Arial" size="8"/>
+									<paragraph leftIndent="2" spacingBefore="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="5abdfac9-80b9-4c96-8ea7-26428e605a38">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="ee1a30e9-92a8-4697-a9cf-3d9f588dd168">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="9" isBold="true"/>
+									<paragraph spacingBefore="3"/>
+								</textElement>
+								<text><![CDATA[Nama Kursus]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="25">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="120" height="25" uuid="3592e385-d855-46b1-83b8-a2c1c3469e4a">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<textElement>
+									<font fontName="Arial" size="8"/>
+									<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TH_TRAINING_TITLE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="5b5eba40-263a-45bc-a01c-1f8fa0e49374">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="4f701e54-39d2-445d-9e56-3919a832bd9e">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="9" isBold="true"/>
+									<paragraph spacingBefore="3"/>
+								</textElement>
+								<text><![CDATA[Tarikh]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="25">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="80" height="25" uuid="cb725e8e-c9eb-42e2-9522-53afb1a1e6a5">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="8"/>
+									<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TARIKH}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="135" uuid="bb928504-8784-40bb-a3a4-9783b254215b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="135" height="30" uuid="e7a16a5c-691c-43f8-b72d-9cd4d78b439e">
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font fontName="Arial" size="9" isBold="true"/>
+									<paragraph spacingBefore="3"/>
+								</textElement>
+								<text><![CDATA[Tempat]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="25">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="135" height="25" uuid="a7d2ae9b-250b-4900-9db6-9f18906f6169">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<textElement>
+									<font fontName="Arial" size="8"/>
+									<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{TH_TRAINING_VENUE} == null?" ":$F{TH_TRAINING_VENUE})+","+($F{SM_STATE_DESC} == null? " ":$F{SM_STATE_DESC})+","+($F{CM_COUNTRY_DESC} == null?" ":$F{CM_COUNTRY_DESC})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="447" uuid="b85d1569-eee1-42d1-b335-1983e8b1bd0b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<componentElement>
+								<reportElement x="0" y="0" width="447" height="30" uuid="9b19be87-dc35-401d-8ece-21dc363e720a">
+									<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+									<property name="com.jaspersoft.studio.table.style.table_header" value="Table 3_TH"/>
+									<property name="com.jaspersoft.studio.table.style.column_header" value="Table 3_CH"/>
+									<property name="com.jaspersoft.studio.table.style.detail" value="Table 3_TD"/>
+								</reportElement>
+								<jr:table>
+									<datasetRun subDataset="dummyDT" uuid="5fb6cf44-df05-41c8-a770-f9c52009560b">
+										<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+									</datasetRun>
+									<jr:column width="20" uuid="ecf39eda-bd3c-40d6-bc30-676816786661">
+										<jr:detailCell style="Table_CH" height="30">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<staticText>
+												<reportElement x="0" y="0" width="20" height="30" uuid="d70f259b-c122-4eec-b7c4-5d91ca7656c5">
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center">
+													<font fontName="Arial" size="9" isBold="true"/>
+													<paragraph spacingBefore="3"/>
+												</textElement>
+												<text><![CDATA[Bil]]></text>
+											</staticText>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="130" uuid="436ff430-42ec-41db-b9f7-1760a64b70b1">
+										<jr:detailCell style="Table_CH" height="30">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<staticText>
+												<reportElement x="0" y="0" width="130" height="30" uuid="7821ac3a-5ea1-4ce8-bb16-012b3eace804">
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center">
+													<font fontName="Arial" size="9" isBold="true"/>
+													<paragraph spacingBefore="3"/>
+												</textElement>
+												<text><![CDATA[Nama Kakitangan]]></text>
+											</staticText>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="40" uuid="85ed16b8-2007-42d0-b0fb-415faae3a26d">
+										<jr:detailCell style="Table_CH" height="30">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<staticText>
+												<reportElement x="0" y="0" width="40" height="30" uuid="d907c57e-9f91-4081-b8ba-325481c9bc51">
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center">
+													<font fontName="Arial" size="9" isBold="true"/>
+													<paragraph spacingBefore="3"/>
+												</textElement>
+												<text><![CDATA[No
+Staf]]></text>
+											</staticText>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="80" uuid="42351db2-907f-49a3-a698-1822a9476e77">
+										<jr:detailCell style="Table_CH" height="30">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<staticText>
+												<reportElement x="0" y="0" width="80" height="30" uuid="4ea16f29-9d86-4f75-97e9-258aeba313ea">
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center">
+													<font fontName="Arial" size="9" isBold="true"/>
+													<paragraph spacingBefore="3"/>
+												</textElement>
+												<text><![CDATA[PTj]]></text>
+											</staticText>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="177" uuid="25b062be-2c01-4d9d-9373-dfd6b41e8865">
+										<jr:detailCell style="Table_CH" height="30">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<staticText>
+												<reportElement x="0" y="0" width="177" height="30" uuid="4eb6e7ae-0e66-43c1-ab6a-345b610eb66e">
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center">
+													<font fontName="Arial" size="9" isBold="true"/>
+													<paragraph spacingBefore="3"/>
+												</textElement>
+												<text><![CDATA[Nama HOD / Alasan]]></text>
+											</staticText>
+										</jr:detailCell>
+									</jr:column>
+								</jr:table>
+							</componentElement>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="25">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<componentElement>
+								<reportElement x="0" y="0" width="447" height="25" uuid="c4dac218-0d7c-4c4f-827d-5fa120f20a6c">
+									<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+									<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+									<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+									<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+								</reportElement>
+								<jr:table>
+									<datasetRun subDataset="STAFF_LIST" uuid="651f0eb0-8bbe-471f-9f5d-7d66bbcd8f7f">
+										<datasetParameter name="DEPARTMENT">
+											<datasetParameterExpression><![CDATA[$P{DEPARTMENT}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="REFID">
+											<datasetParameterExpression><![CDATA[$V{TR_LIST_REFID}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="TRAINING_MM">
+											<datasetParameterExpression><![CDATA[$P{TRAINING_MM}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="TRAINING_YEAR">
+											<datasetParameterExpression><![CDATA[$P{TRAINING_YEAR}]]></datasetParameterExpression>
+										</datasetParameter>
+										<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+									</datasetRun>
+									<jr:column width="20" uuid="af9b6c21-e7e9-4218-8f68-ad03aa82d382">
+										<jr:detailCell style="Table 1_TD" height="25">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement x="0" y="0" width="20" height="25" uuid="1f8a76e0-83af-4cb9-bd30-430edc7734b2">
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Center" markup="styled">
+													<font fontName="Arial" size="8"/>
+													<paragraph leftIndent="2" spacingBefore="2"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="130" uuid="c9078e60-af85-4a0d-b5bf-c8dd6fa471e0">
+										<jr:detailCell style="Table 1_TD" height="25">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement x="0" y="0" width="130" height="25" uuid="b0698a10-698f-4aff-91f2-4ed36abf65c3">
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+													<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+												</reportElement>
+												<textElement>
+													<font fontName="Arial" size="8"/>
+													<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{SM_STAFF_NAME}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="40" uuid="da49082a-4405-41ad-96d4-a772b1b9c186">
+										<jr:detailCell style="Table 1_TD" height="25">
+											<property name="com.jaspersoft.studio.unit.width" value="px"/>
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement x="0" y="0" width="40" height="25" uuid="7c659d85-76b4-4ace-a79d-ea9b1a5c8afa">
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+													<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+												</reportElement>
+												<textElement>
+													<font fontName="Arial" size="8"/>
+													<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{STH_STAFF_ID}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="80" uuid="21834a5a-3b00-426d-acfa-11bab84878a2">
+										<jr:detailCell style="Table 1_TD" height="25">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement x="0" y="0" width="80" height="25" uuid="1a02d3dc-4abf-409b-8389-de3f220a0ca7">
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+													<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+												</reportElement>
+												<textElement>
+													<font fontName="Arial" size="8"/>
+													<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+												</textElement>
+												<textFieldExpression><![CDATA[$F{SM_DEPT_CODE}]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+									<jr:column width="177" uuid="9d31d184-82e8-4ee1-b3cd-d43d1b5e794c">
+										<jr:detailCell style="Table 1_TD" height="25">
+											<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+												<reportElement x="0" y="0" width="177" height="25" uuid="5866bf70-9e53-4946-ac8e-19288709fda9">
+													<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+													<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+													<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+												</reportElement>
+												<textElement textAlignment="Left" markup="html">
+													<font fontName="Arial" size="8"/>
+													<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+												</textElement>
+												<textFieldExpression><![CDATA["Alasan : "+($F{STH_RECOMMENDER_REASON}==null?"":$F{STH_RECOMMENDER_REASON})]]></textFieldExpression>
+											</textField>
+										</jr:detailCell>
+									</jr:column>
+								</jr:table>
+							</componentElement>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="75" splitType="Stretch">
+			<textField evaluationTime="Master">
+				<reportElement x="702" y="60" width="100" height="15" uuid="9eab1626-192c-4498-89c1-3df06cbac120"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MASTER_CURRENT_PAGE}+"     /     "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

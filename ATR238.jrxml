@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ATR238" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18e2b6be-1617-438c-9b79-28f9ebedec7e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+	<property name="ireport.jasperserver.url" value="http://10.99.1.192:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="syazwan|upsidev"/>
+	<property name="ireport.jasperserver.report.resource" value="/Reports/MyHRIS/HRA_AT/ATR238_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Reports/MyHRIS/HRA_AT/ATR238"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#BFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="organizerAddress" uuid="e6d63d26-8c15-4d0f-aacc-0947ffec3578">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="ORG_CODE" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+TOH_ORG_DESC AS "TOH_ORG_DESC",
+TOH_ADDRESS AS "TOH_ADDRESS",
+TOH_POSTCODE AS "TOH_POSTCODE",
+TOH_CITY AS "TOH_CITY",
+SM_STATE_DESC AS "SM_STATE_DESC",
+CM_COUNTRY_DESC AS "CM_COUNTRY_DESC"
+FROM TRAINING_ORGANIZER_HEAD,STATE_MAIN,COUNTRY_MAIN
+WHERE TOH_ORG_CODE =  $P{ORG_CODE} 
+AND TOH_STATE = SM_STATE_CODE
+AND TOH_COUNTRY = CM_COUNTRY_CODE]]>
+		</queryString>
+		<field name="TOH_ORG_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TOH_ORG_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_organizer_head"/>
+		</field>
+		<field name="TOH_ADDRESS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TOH_ADDRESS"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_organizer_head"/>
+		</field>
+		<field name="TOH_POSTCODE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TOH_POSTCODE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_organizer_head"/>
+		</field>
+		<field name="TOH_CITY" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TOH_CITY"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_organizer_head"/>
+		</field>
+		<field name="SM_STATE_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_STATE_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="state_main"/>
+		</field>
+		<field name="CM_COUNTRY_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CM_COUNTRY_DESC"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="country_main"/>
+		</field>
+	</subDataset>
+	<subDataset name="upFormula" uuid="3e22d582-8c59-4acf-a93f-2337df0a2d1f">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="TRAINING_REFID" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT THD_FOR_ATTENTION AS "THD_FOR_ATTENTION"
+FROM TRAINING_HEAD_DETL
+WHERE THD_REF_ID = $P{TRAINING_REFID}]]>
+		</queryString>
+		<field name="THD_FOR_ATTENTION" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="THD_FOR_ATTENTION"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="training_head_detl"/>
+		</field>
+	</subDataset>
+	<subDataset name="staffList" uuid="f4b3a355-d005-4a40-8b6e-7911d54e6218">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="322"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="673"/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyHRIS_PG"/>
+		<parameter name="STH_REFID" class="java.lang.String"/>
+		<parameter name="STH_STAFF_ID" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT SM_STAFF_NAME AS "SM_STAFF_NAME", SM_IC_NO AS "SM_IC_NO", 
+(
+    SELECT SS_SERVICE_DESC AS "SS_SERVICE_DESC"
+    FROM
+    SERVICE_SCHEME, STAFF_TRAINING_HEAD, STAFF_MAIN
+    WHERE SS_SERVICE_CODE = SM_JOB_CODE
+    AND STH_STAFF_ID = SM_STAFF_ID
+    AND STH_TRAINING_REFID = $P{STH_REFID}
+    AND ($P{STH_STAFF_ID} IS NULL OR ($P{STH_STAFF_ID} IS NOT NULL AND STH_STAFF_ID = $P{STH_STAFF_ID}))
+) AS "SS_SERVICE_DESC"
+FROM
+(  
+	SELECT
+	STH_TRAINING_REFID,STH_STAFF_ID,SM_STAFF_NAME, SM_IC_NO,SM_DEPT_CODE,
+	SM_JOB_CODE,SM_TELNO_WORK,SM_HANDPHONE_NO,SS_JOB_STATUS,SJS_STATUS_DESC,STH_STATUS,STH_DEPT_TRAINING_BENEFIT,
+	STH_VERIFY_BY,TO_CHAR(STH_VERIFY_DATE,'dd/mm/yyyy') STH_VERIFY_DATE,
+	STH_APPROVE_REASON,STH_APPROVE_BY,TO_CHAR(STH_APPROVE_DATE,'dd MONTH yyyy') STH_APPROVE_DATE
+	FROM STAFF_TRAINING_HEAD,STAFF_MAIN,STAFF_SERVICE,STAFF_JOB_STATUS
+	WHERE STH_STAFF_ID = SM_STAFF_ID
+	AND SS_STAFF_ID = SM_STAFF_ID
+	AND SS_JOB_STATUS = SJS_STATUS_CODE
+	AND ($P{STH_STAFF_ID} IS NULL OR ($P{STH_STAFF_ID} IS NOT NULL AND STH_STAFF_ID = $P{STH_STAFF_ID}))
+	AND STH_TRAINING_REFID = $P{STH_REFID} 
+	AND STH_STATUS = 'APPROVE'
+) AS TB1]]>
+		</queryString>
+		<field name="SM_STAFF_NAME" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_STAFF_NAME"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
+		</field>
+		<field name="SM_IC_NO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SM_IC_NO"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
+		</field>
+		<field name="SS_SERVICE_DESC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SS_SERVICE_DESC"/>
+		</field>
+	</subDataset>
+	<parameter name="TRAINING_REFID" class="java.lang.String"/>
+	<parameter name="STAFFID" class="java.lang.String"/>
+	<parameter name="RUJUKAN" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+TO_CHAR(CURRENT_DATE, 'DD MONTH YYYY') AS "CURR_DATE",
+TH_REF_ID AS "TH_REF_ID",
+TH_TRAINING_TITLE AS "TH_TRAINING_TITLE",
+TH_ORGANIZER_NAME AS "TH_ORGANIZER_NAME",
+TH_TRAINING_VENUE AS "TH_TRAINING_VENUE",
+TH_TRAINING_STATE AS "TH_TRAINING_STATE",
+TH_TRAINING_COUNTRY AS "TH_TRAINING_COUNTRY",
+TO_CHAR(TH_DATE_FROM,'dd/mm/yyyy')||' hingga '||TO_CHAR(TH_DATE_TO,'dd/mm/yyyy') AS "TARIKH",
+TO_CHAR(TH_TRAINING_FEE,'999,999,999.99') AS "FEE"
+FROM TRAINING_HEAD
+WHERE TH_INTERNAL_EXTERNAL = 'EXTERNAL_AGENCY'
+AND TH_REF_ID = $P{TRAINING_REFID} 
+AND TH_STATUS = 'APPROVE']]>
+	</queryString>
+	<field name="CURR_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CURR_DATE"/>
+	</field>
+	<field name="TH_REF_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_REF_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TH_TRAINING_TITLE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_TITLE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TH_ORGANIZER_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_ORGANIZER_NAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TH_TRAINING_VENUE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_VENUE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TH_TRAINING_STATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_STATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TH_TRAINING_COUNTRY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TH_TRAINING_COUNTRY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="training_head"/>
+	</field>
+	<field name="TARIKH" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="TARIKH"/>
+	</field>
+	<field name="FEE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FEE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<frame>
+				<reportElement x="19" y="-10" width="491" height="108" uuid="8deb3276-dc74-474f-bf2b-61d4624cbabe"/>
+				<staticText>
+					<reportElement x="191" y="10" width="254" height="18" uuid="56bd9f3a-1022-4a9e-8cea-8ac64433d3c6"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[UNIVERSITI PENDIDIKAN SULTAN IDRIS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="191" y="29" width="174" height="51" uuid="a3e00a76-5d07-48cd-af14-09ef703c045d"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[35900 Tanjong Malim,
+Perak Darul Ridzuan, Malaysia
+Tel : 05-450 6000
+Faks : 05 : 459 5488]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="191" y="80" width="100" height="20" uuid="a00de7ca-ae4c-438d-bc84-b5928d630f42"/>
+					<textElement verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" isUnderline="true"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style forecolor='	#0000FF'>www.upsi.edu.my</style>"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="351" y="80" width="140" height="20" uuid="9fc2a2b3-2ffc-4d77-8956-d6f15641fc6c"/>
+					<textElement verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial" isUnderline="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style forecolor='	#0000FF'>bsm.latihan@upsi.edu.my</style>"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="301" y="80" width="40" height="20" uuid="0b38ad62-1228-4e05-96ab-d04655216241"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[Email :]]></text>
+				</staticText>
+				<image>
+					<reportElement x="0" y="10" width="180" height="100" uuid="15530717-a0f5-4fc9-a887-125b2e0fedd8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA["D:\\UPSIDev\\JaspersoftWorkspace_6_10\\MyHRIS\\TrainingAppl\\images\\logo_upsi.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="553" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="b29cabbb-63e6-42e2-9bb4-0d4776f08ad6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<frame>
+				<reportElement x="330" y="0" width="170" height="20" uuid="ff3951c7-70f4-4df4-8287-32237c9e14f7"/>
+				<staticText>
+					<reportElement x="0" y="0" width="50" height="20" uuid="c306009d-8f6e-4257-b374-2f4564a5f2d7"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[Ruj Kami]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="70" y="0" width="100" height="20" uuid="3ad15a90-b5c0-4bbf-9f9d-6729b82415a3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{RUJUKAN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="61" y="0" width="9" height="20" uuid="aae5166e-27b2-4d30-a754-f4c66b33d842"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="330" y="20" width="170" height="20" uuid="b6db64fc-998a-4297-a979-8e9a190d2723"/>
+				<staticText>
+					<reportElement x="0" y="0" width="50" height="20" uuid="2d3418d7-f257-454b-842d-0cb90fbef0ad"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[Tarikh]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="61" y="0" width="9" height="20" uuid="4543e093-4a81-4a07-9010-4f8eb4bbd9a1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField pattern="d MMMM yyyy">
+					<reportElement x="70" y="0" width="100" height="20" uuid="73ea7cea-f97d-4e16-9f23-d83a2dfd8eec"/>
+					<textElement verticalAlignment="Middle" markup="styled">
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CURR_DATE}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<componentElement>
+				<reportElement positionType="Float" x="10" y="50" width="320" height="60" uuid="b8ca885f-2e8b-4cb5-aaaf-994df474632d"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="organizerAddress" uuid="d9fe0b39-2ad6-4857-8ded-73b440f5a695">
+						<datasetParameter name="ORG_CODE">
+							<datasetParameterExpression><![CDATA[$F{TH_ORGANIZER_NAME}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="60" width="320">
+						<textField>
+							<reportElement x="0" y="0" width="320" height="20" uuid="95dee1b9-e04c-47f3-a20a-0fd886b1c6cd"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{TOH_ORG_DESC}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="12" width="320" height="20" uuid="ee036148-1092-406a-bcbb-c9be0e6ee4ad"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{TOH_ADDRESS}+","]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="24" width="320" height="20" uuid="27a71ba2-36bf-4378-ba2f-afed7df5a6d1"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{TOH_POSTCODE}+" "+$F{TOH_CITY}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="0" y="36" width="320" height="18" uuid="b24ca3e2-f4ef-4ede-8624-e4600b6b975f"/>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{SM_STATE_DESC}+", "+$F{CM_COUNTRY_DESC}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement positionType="Float" x="10" y="103" width="320" height="17" uuid="8f386833-1a8e-4057-8659-036f9e4e55cb"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="upFormula" uuid="95667c34-4122-407d-b024-e88c009ef5c7">
+						<datasetParameter name="TRAINING_REFID">
+							<datasetParameterExpression><![CDATA[$F{TH_REF_ID}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="17" width="320">
+						<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+							<reportElement x="0" y="0" width="320" height="17" uuid="c88f1c90-960c-49be-a675-b54d99d42e2c"/>
+							<textElement verticalAlignment="Top">
+								<font fontName="Arial"/>
+							</textElement>
+							<textFieldExpression><![CDATA[("U.P : "+(($F{THD_FOR_ATTENTION}!=null)?$F{THD_FOR_ATTENTION}:""))]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="130" width="100" height="17" uuid="305a1e5d-fc0c-47d7-a679-3b83d05ca341"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Tuan / Puan,]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="10" y="157" width="545" height="12" uuid="fccabf73-07fd-4281-bf64-89afbe0f3d93"/>
+				<textElement markup="html">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[("PENGESAHAN PESERTA KURSUS : "+(($F{TH_TRAINING_TITLE}!=null)?$F{TH_TRAINING_TITLE}:""))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="189" width="545" height="18" uuid="725262e1-523b-4766-a88c-7b5665c1c24c"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Saya dengan hormatnya merujuk kepada perkara di atas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="213" width="545" height="18" uuid="0a5ab5f7-cb56-4a01-9518-b27ce767836f"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[2.   Pihak kami ingin membuat pengesahan tempahan bagi butiran seperti  berikut : ]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="30" y="255" width="525" height="20" uuid="39ab668f-3c03-47a2-8530-aa1785cf9794"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="ContainerHeight" x="95" y="0" width="430" height="20" uuid="0ac628a7-8bbe-4572-ad70-4d356ed28b15"/>
+					<textElement>
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TH_TRAINING_TITLE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="20" uuid="704b9db3-09f9-48cc-b5f7-086179b03da3"/>
+					<textElement>
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama Kursus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="0" width="10" height="20" uuid="14abfa89-ecc1-40ad-985b-ca2012d2ad26"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="30" y="237" width="525" height="20" uuid="6d42d87c-f10f-4ce2-b12d-6d1fda682e06"/>
+				<textField isBlankWhenNull="true">
+					<reportElement x="95" y="0" width="430" height="20" uuid="826dd01a-7dd5-403f-a823-0dc5ed0c3c60"/>
+					<textElement>
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TARIKH}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="20" uuid="31fdebb1-efb9-4dcb-ab62-04a722283ef9"/>
+					<textElement>
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tarikh]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="0" width="10" height="20" uuid="56173c60-97e1-4b41-b7d7-699c3bd67d30"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="19" y="280" width="535" height="59" uuid="137ec26a-72ed-4529-9572-a7d08beb948f"/>
+				<componentElement>
+					<reportElement x="0" y="0" width="535" height="59" uuid="7deb5804-d980-4ec3-aa14-b6d828eca8b7">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="staffList" uuid="bdcbc9e4-5493-4b48-95db-1118e397d126">
+							<datasetParameter name="STH_REFID">
+								<datasetParameterExpression><![CDATA[$P{TRAINING_REFID}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="STH_STAFF_ID">
+								<datasetParameterExpression><![CDATA[$P{STAFFID}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="230" uuid="18e4f408-f871-4e9b-8a6c-209c9b8fc608">
+							<jr:tableHeader style="Table_TH" height="25">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<staticText>
+									<reportElement x="0" y="0" width="230" height="25" uuid="782dfaa0-d230-4346-b57c-3bcb5cfc67ae">
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Center">
+										<font fontName="Arial" isBold="true"/>
+										<paragraph spacingBefore="2"/>
+									</textElement>
+									<text><![CDATA[Nama Peserta]]></text>
+								</staticText>
+							</jr:tableHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="230" height="30" uuid="367acd24-899c-42c0-be02-afa7c43c974e">
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									</reportElement>
+									<textElement>
+										<font fontName="Arial" isBold="true"/>
+										<paragraph leftIndent="3" spacingBefore="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{SM_STAFF_NAME}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="140" uuid="391d5784-0c5c-4c39-b58e-977c151c399f">
+							<jr:tableHeader style="Table_TH" height="25">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<staticText>
+									<reportElement x="0" y="0" width="140" height="25" uuid="91f64750-4a03-4e5d-b008-6af16b3364c6">
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Center">
+										<font fontName="Arial" isBold="true"/>
+										<paragraph spacingBefore="2"/>
+									</textElement>
+									<text><![CDATA[No. KP]]></text>
+								</staticText>
+							</jr:tableHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="140" height="30" uuid="2a1a5bbc-18b3-4d8c-ac8e-2c57960a7398">
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									</reportElement>
+									<textElement>
+										<font fontName="Arial" isBold="true"/>
+										<paragraph leftIndent="3" spacingBefore="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{SM_IC_NO}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="165" uuid="8d69d0f1-f533-4dbc-bc89-397c68122e24">
+							<jr:tableHeader style="Table_TH" height="25">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<property name="com.jaspersoft.studio.unit.height" value="px"/>
+								<staticText>
+									<reportElement x="0" y="0" width="165" height="25" uuid="5c13a980-3494-464a-97e8-ccab14e8a297">
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Center">
+										<font fontName="Arial" isBold="true"/>
+										<paragraph spacingBefore="2"/>
+									</textElement>
+									<text><![CDATA[Jawatan]]></text>
+								</staticText>
+							</jr:tableHeader>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="165" height="30" uuid="cdb37a93-bc7e-4d47-83ba-2b982a846af1">
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+										<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+										<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.tabStopWidth" value="px"/>
+										<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Left">
+										<font fontName="Arial" isBold="true"/>
+										<paragraph leftIndent="3" spacingBefore="5" spacingAfter="0" tabStopWidth="40"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{SS_SERVICE_DESC}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="350" width="519" height="39" uuid="6d8dcda2-b3c7-47f0-b905-ad8b26088d4b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[3.   Kerjasama tuan/puan dipohon untuk menghantar invois asal beserta salinan penyata kewangan syarikat ke Unit Latihan, Bahagian Sumber Manusia, Universiti Pendidikan Sultan Idris untuk urusan rekod dan pembayaran.  Sebarang pertanyaan sila berhubung dengan Unit Latihan, Bahagian Sumber Manusia di talian 05-450 6494.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="399" width="100" height="20" uuid="9e672f8f-ea16-4170-8e64-58cfa3fbeb1e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Sekian, terima kasih.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="429" width="170" height="20" uuid="97d53a4a-9ee0-41a3-9baf-037a9ca5d96c"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA['UNIVERSITI NO.1 PENDIDIKAN']]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="469" width="170" height="40" uuid="d1e00d30-a654-47d1-9c60-8c2a90c6145e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Yang menjalankan tugas,
+Pendaftar
+Universiti Pendidikan Sultan Idris ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="84">
+			<staticText>
+				<reportElement positionType="Float" x="5" y="16" width="555" height="68" uuid="fe3e8389-0ac7-483e-9a2f-7c15222d2435"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Surat ini dijana melalui komputer.  Tandatangan tidak diperlukan)]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
