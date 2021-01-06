@@ -164,9 +164,9 @@ LEFT JOIN COUNTRY_MAIN ON TH_TRAINING_COUNTRY = CM_COUNTRY_CODE
 LEFT JOIN TRAINING_ORGANIZER_HEAD ON TOH_ORG_CODE = TH_ORGANIZER_NAME
 WHERE TH_INTERNAL_EXTERNAL = 'EXTERNAL_AGENCY'
 AND TH_STATUS = 'APPROVE'
-AND ($P{DEPARTMENT} IS NULL OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
-AND ($P{STATUS} IS NULL OR ($P{STATUS} IS NOT NULL AND STH_STATUS = $P{STATUS}))
-AND ($P{TRAINING_MM} IS NULL OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
+AND (($P{DEPARTMENT} IS NULL OR $P{DEPARTMENT} = '') OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
+AND (($P{STATUS} IS NULL OR $P{STATUS} = '') OR ($P{STATUS} IS NOT NULL AND STH_STATUS = $P{STATUS}))
+AND (($P{TRAINING_MM} IS NULL OR $P{TRAINING_MM} = '') OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
 AND TO_CHAR(TH_DATE_FROM,'yyyy') = $P{TRAINING_YEAR}]]>
 		</queryString>
 		<field name="TH_REF_ID" class="java.lang.String">
@@ -236,23 +236,27 @@ LEFT JOIN STAFF_MAIN ON STH_STAFF_ID = SM_STAFF_ID
 LEFT JOIN DEPARTMENT_MAIN ON SM_DEPT_CODE = DM_DEPT_CODE
 WHERE TH_INTERNAL_EXTERNAL = 'EXTERNAL_AGENCY'
 AND TH_STATUS = 'APPROVE'
-AND ($P{DEPARTMENT} IS NULL OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
-AND ($P{STATUS} IS NULL OR ($P{STATUS} IS NOT NULL AND STH_STATUS = $P{STATUS}))
-AND ($P{TRAINING_MM} IS NULL OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
+AND (($P{DEPARTMENT} IS NULL OR $P{DEPARTMENT} = '') OR ($P{DEPARTMENT} IS NOT NULL AND SM_DEPT_CODE = $P{DEPARTMENT}))
+AND (($P{STATUS} IS NULL OR $P{STATUS} = '') OR ($P{STATUS} IS NOT NULL AND STH_STATUS = $P{STATUS}))
+AND (($P{TRAINING_MM} IS NULL OR $P{TRAINING_MM} = '') OR ($P{TRAINING_MM} IS NOT NULL AND TO_CHAR(TH_DATE_FROM,'mm') = $P{TRAINING_MM}))
 AND TO_CHAR(TH_DATE_FROM,'yyyy') = $P{TRAINING_YEAR}
 AND TH_REF_ID = $P{REFID}]]>
 		</queryString>
 		<field name="SM_STAFF_NAME" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.label" value="SM_STAFF_NAME"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
 		</field>
 		<field name="STH_STAFF_ID" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.label" value="STH_STAFF_ID"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
 		</field>
 		<field name="SM_DEPT_CODE" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.label" value="SM_DEPT_CODE"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_main"/>
 		</field>
 		<field name="STH_STATUS" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.label" value="STH_STATUS"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="staff_training_head"/>
 		</field>
 		<variable name="SID" class="java.lang.String">
 			<variableExpression><![CDATA[$F{STH_STAFF_ID}]]></variableExpression>
